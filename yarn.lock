@@ -860,19 +860,19 @@
     npmlog "^4.1.2"
     write-file-atomic "^3.0.3"
 
-"@naos/airslate-external@^1.1.0":
-  version "1.1.0"
-  resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/@naos/airslate-external/-/@naos/airslate-external-1.1.0.tgz#c472a3edc4ee52f4e3da46525545e4b64a8100b6"
-  integrity sha1-xHKj7cTuUvTj2kZSVUXktkqBALY=
+"@naos/airslate-external@^2.0.0":
+  version "2.0.0"
+  resolved "https://artifactory.infrateam.xyz:443/artifactory/api/npm/npm/@naos/airslate-external/-/@naos/airslate-external-2.0.0.tgz#27e4d6a79247d52a5645ef43595cbe6df36b1afe"
+  integrity sha512-L3IIbN1JMCV4YnpCEx3Cs5lE0POonykiDNzixq9vIwg8OK3dkFlEGC0qUF8CeroQT8h0s/4TAfRa8SJlR/imfg==
   dependencies:
-    node-fetch "^3.0.0-beta.2"
+    node-fetch "^3.0.0-beta.9"
 
-"@naos/airslate-lerna@^1.2.2":
-  version "1.2.2"
-  resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/@naos/airslate-lerna/-/@naos/airslate-lerna-1.2.2.tgz#dcaad53d7966aae2a397216f381659c456e502eb"
-  integrity sha1-3KrVPXlmquKjlyFvOBZZxFblAus=
+"@naos/airslate-lerna@^1.3.1":
+  version "1.3.1"
+  resolved "https://artifactory.infrateam.xyz:443/artifactory/api/npm/npm/@naos/airslate-lerna/-/@naos/airslate-lerna-1.3.1.tgz#56e07b6f6363ff4f6ac7beb41e94ec5480cccacc"
+  integrity sha512-CblULJgeJM3CYVQp1uwZBUNsZx+BqhczxDS2spZzl8B/jcJG907rSzsjq/zCkERLu5uTZ7/HDZRPTQowWtTKGw==
   dependencies:
-    "@naos/airslate-external" "^1.1.0"
+    "@naos/airslate-external" "^2.0.0"
     argparse "^2.0.1"
     get-monorepo-packages "^1.2.0"
     lodash "^4.17.21"
@@ -1968,10 +1968,10 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
-data-uri-to-buffer@^3.0.0:
-  version "3.0.1"
-  resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/data-uri-to-buffer/-/data-uri-to-buffer-3.0.1.tgz#594b8973938c5bc2c33046535785341abc4f3636"
-  integrity sha1-WUuJc5OMW8LDMEZTV4U0GrxPNjY=
+data-uri-to-buffer@^4.0.0:
+  version "4.0.0"
+  resolved "https://artifactory.infrateam.xyz:443/artifactory/api/npm/npm/data-uri-to-buffer/-/data-uri-to-buffer-4.0.0.tgz#b5db46aea50f6176428ac05b73be39a57701a64b"
+  integrity sha512-Vr3mLBA8qWmcuschSLAOogKgQ/Jwxulv3RNE4FXnYWRGujzrRWQI4m12fQqRkwX06C0KanhLr4hK+GydchZsaA==
 
 dateformat@^3.0.0:
   version "3.0.3"
@@ -2347,10 +2347,13 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
-fetch-blob@^1.0.5:
-  version "1.0.7"
-  resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/fetch-blob/-/fetch-blob-1.0.7.tgz#c2ceffcde92dac1613c26289cd006019859ec2aa"
-  integrity sha1-ws7/zektrBYTwmKJzQBgGYWewqo=
+fetch-blob@^3.1.2, fetch-blob@^3.1.4:
+  version "3.1.5"
+  resolved "https://artifactory.infrateam.xyz:443/artifactory/api/npm/npm/fetch-blob/-/fetch-blob-3.1.5.tgz#0077bf5f3fcdbd9d75a0b5362f77dbb743489863"
+  integrity sha512-N64ZpKqoLejlrwkIAnb9iLSA3Vx/kjgzpcDhygcqJ2KKjky8nCgUQ+dzXtbrLaWZGZNmNfQTsiQ0weZ1svglHg==
+  dependencies:
+    node-domexception "^1.0.0"
+    web-streams-polyfill "^3.0.3"
 
 figures@^2.0.0:
   version "2.0.0"
@@ -2465,6 +2468,13 @@ form-data@~2.3.2:
     asynckit "^0.4.0"
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
+
+formdata-polyfill@^4.0.10:
+  version "4.0.10"
+  resolved "https://artifactory.infrateam.xyz:443/artifactory/api/npm/npm/formdata-polyfill/-/formdata-polyfill-4.0.10.tgz#24807c31c9d402e002ab3d8c720144ceb8848423"
+  integrity sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==
+  dependencies:
+    fetch-blob "^3.1.2"
 
 fragment-cache@^0.2.1:
   version "0.2.1"
@@ -3947,18 +3957,24 @@ neo-async@^2.6.0:
   resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity "sha1-rCetpmFn+ohJpq3dg39rGJrSCBw= sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw=="
 
+node-domexception@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.infrateam.xyz:443/artifactory/api/npm/npm/node-domexception/-/node-domexception-1.0.0.tgz#6888db46a1f71c0b76b3f7555016b63fe64766e5"
+  integrity sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==
+
 node-fetch@^2.6.1:
   version "2.6.1"
   resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha1-BFvTI2Mfdu0uK1VXM5RBa2OaAFI=
 
-node-fetch@^3.0.0-beta.2:
-  version "3.0.0-beta.2"
-  resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/node-fetch/-/node-fetch-3.0.0-beta.2.tgz#21dab0112c90d66d5d8b4f1e7a895cae5ac9d391"
-  integrity sha1-IdqwESyQ1m1di08eeolcrlrJ05E=
+node-fetch@^3.0.0-beta.9:
+  version "3.2.3"
+  resolved "https://artifactory.infrateam.xyz:443/artifactory/api/npm/npm/node-fetch/-/node-fetch-3.2.3.tgz#a03c9cc2044d21d1a021566bd52f080f333719a6"
+  integrity sha512-AXP18u4pidSZ1xYXRDPY/8jdv3RAozIt/WLNR/MBGZAz+xjtlr90RvCnsvHQRiXyWliZF/CpytExp32UU67/SA==
   dependencies:
-    data-uri-to-buffer "^3.0.0"
-    fetch-blob "^1.0.5"
+    data-uri-to-buffer "^4.0.0"
+    fetch-blob "^3.1.4"
+    formdata-polyfill "^4.0.10"
 
 node-gyp@^5.0.2:
   version "5.0.3"
@@ -5739,6 +5755,11 @@ wcwidth@^1.0.0:
   integrity "sha1-8LDc+RW8X/FSivrbLA4XtTLaL+g= sha512-XHPEwS0q6TaxcvG85+8EYkbiCux2XtWG2mkc47Ng2A77BQu9+DqIOJldST4HgPkuea7dvKSj5VgX3P1d4rW8Tg=="
   dependencies:
     defaults "^1.0.3"
+
+web-streams-polyfill@^3.0.3:
+  version "3.2.1"
+  resolved "https://artifactory.infrateam.xyz:443/artifactory/api/npm/npm/web-streams-polyfill/-/web-streams-polyfill-3.2.1.tgz#71c2718c52b45fd49dbeee88634b3a60ceab42a6"
+  integrity sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==
 
 webidl-conversions@^6.1.0:
   version "6.1.0"

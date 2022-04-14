@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/isachivka/lerna-test/compare/@lerna-test/a@1.4.1...@lerna-test/a@1.5.0) (2022-04-14)
+
+
+### Features
+
+* **a:** 55 ([3574483](https://github.com/isachivka/lerna-test/commit/3574483fc1d1b0eb1aee637ec8a41cae19e86c63))
+
+
+
+
+
 ## [1.4.1](https://github.com/isachivka/lerna-test/compare/@lerna-test/a@1.4.0...@lerna-test/a@1.4.1) (2022-04-14)
 
 

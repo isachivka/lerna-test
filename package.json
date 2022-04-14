@@ -1,0 +1,29 @@
+{
+  "private": "true",
+  "workspaces": [
+    "packages/*"
+  ],
+  "name": "lerna-test",
+  "scripts": {
+    "commit": "cz",
+    "dev-publish": "lerna publish --conventional-prerelease --no-git-tag-version --no-changelog --exact",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@commitlint/config-lerna-scopes": "^12.1.1",
+    "@isachivka/cz-conventional-changelog-for-jira": "^1.0.0",
+    "@naos/airslate-lerna": "^1.2.2",
+    "@testing-library/react-hooks": "^2.0.3",
+    "commitizen": "^4.2.3",
+    "get-monorepo-packages": "^1.2.0",
+    "husky": "^7.0.0",
+    "lerna": "^4.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./commitizen.js"
+    }
+  }
+}

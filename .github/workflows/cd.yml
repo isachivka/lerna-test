@@ -1,0 +1,57 @@
+name: CD
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+    strategy:
+      matrix:
+        node-version: [ 12.x ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_PAT }}
+
+      - name: Setup Node ${{ matrix.node_version }}
+        uses: actions/setup-node@v1
+
+      - name: npm config set registry
+        run: npm config set registry https://artifactory.infrateam.xyz/artifactory/api/npm/npm/
+      - name: set npm authToken
+        run: echo "//artifactory.infrateam.xyz/artifactory/api/npm/npm/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+      - name: set npm auth
+        run: echo "//artifactory.infrateam.xyz/artifactory/api/npm/npm/:_auth=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+      - name: set always-auth
+        run: echo "//artifactory.infrateam.xyz/artifactory/api/npm/npm/:always-auth = true" >> ~/.npmrc
+
+      - name: set npm legacy authToken
+        run: echo "//artifactory.infrateam.xyz/api/npm/npm/:_authToken=${{ secrets.NPM_LEGACY_TOKEN }}" >> ~/.npmrc
+      - name: set npm legacy auth
+        run: echo "//artifactory.infrateam.xyz/api/npm/npm/:_auth=${{ secrets.NPM_LEGACY_TOKEN }}" >> ~/.npmrc
+      - name: set legacy always-auth
+        run: echo "//artifactory.infrateam.xyz/api/npm/npm/:always-auth = true" >> ~/.npmrc
+
+
+      - name: Install dependencies
+        run: yarn --ignore-engines
+
+      - name: Configure Git User
+        run: |
+          git config --global user.email "juicy.igor@gmail.com"
+          git config --global user.name "Igor Sachivka"
+
+      - name: Lerna publish
+        run: lerna publish --conventional-commits --yes --exact 2>&1 | yarn airslate-lerna --token=${SLATE_TOKEN}
+        env:
+          SLATE_TOKEN: ${{ secrets.SLATE_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

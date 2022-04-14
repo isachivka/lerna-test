@@ -860,19 +860,19 @@
     npmlog "^4.1.2"
     write-file-atomic "^3.0.3"
 
-"@naos/airslate-external@^2.0.0":
-  version "2.0.0"
-  resolved "https://artifactory.infrateam.xyz:443/artifactory/api/npm/npm/@naos/airslate-external/-/@naos/airslate-external-2.0.0.tgz#27e4d6a79247d52a5645ef43595cbe6df36b1afe"
-  integrity sha512-L3IIbN1JMCV4YnpCEx3Cs5lE0POonykiDNzixq9vIwg8OK3dkFlEGC0qUF8CeroQT8h0s/4TAfRa8SJlR/imfg==
+"@naos/airslate-external@^2.0.1":
+  version "2.0.1"
+  resolved "https://artifactory.infrateam.xyz:443/artifactory/api/npm/npm/@naos/airslate-external/-/@naos/airslate-external-2.0.1.tgz#befcc26d1888655f8ab1926f25430577be63a971"
+  integrity sha512-cIE0TTFDw2xffzNvB8zD2CfAtQ7Qhz7E3e/Ows0XduOvBUlFxLx1N4+RfQNrxD4g0Yy9lO22/zvPzoHtiY91Qw==
   dependencies:
-    node-fetch "^3.0.0-beta.9"
+    node-fetch "^3.2.3"
 
-"@naos/airslate-lerna@^1.3.1":
-  version "1.3.1"
-  resolved "https://artifactory.infrateam.xyz:443/artifactory/api/npm/npm/@naos/airslate-lerna/-/@naos/airslate-lerna-1.3.1.tgz#56e07b6f6363ff4f6ac7beb41e94ec5480cccacc"
-  integrity sha512-CblULJgeJM3CYVQp1uwZBUNsZx+BqhczxDS2spZzl8B/jcJG907rSzsjq/zCkERLu5uTZ7/HDZRPTQowWtTKGw==
+"@naos/airslate-lerna@^1.3.2":
+  version "1.3.2"
+  resolved "https://artifactory.infrateam.xyz:443/artifactory/api/npm/npm/@naos/airslate-lerna/-/@naos/airslate-lerna-1.3.2.tgz#a0cf3c7f648a487fd7311c212962623dd8f0e9a8"
+  integrity sha512-pun0zsxOMtDvFlAXwF7zgzVNxTcJya3TAaZEXJqgVyhLvuDIo/oRqeyQy7gjM3zDDsy5JuNdZWwWFKWDnXFefg==
   dependencies:
-    "@naos/airslate-external" "^2.0.0"
+    "@naos/airslate-external" "^2.0.1"
     argparse "^2.0.1"
     get-monorepo-packages "^1.2.0"
     lodash "^4.17.21"
@@ -3967,7 +3967,7 @@ node-fetch@^2.6.1:
   resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha1-BFvTI2Mfdu0uK1VXM5RBa2OaAFI=
 
-node-fetch@^3.0.0-beta.9:
+node-fetch@^3.2.3:
   version "3.2.3"
   resolved "https://artifactory.infrateam.xyz:443/artifactory/api/npm/npm/node-fetch/-/node-fetch-3.2.3.tgz#a03c9cc2044d21d1a021566bd52f080f333719a6"
   integrity sha512-AXP18u4pidSZ1xYXRDPY/8jdv3RAozIt/WLNR/MBGZAz+xjtlr90RvCnsvHQRiXyWliZF/CpytExp32UU67/SA==

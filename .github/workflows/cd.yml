@@ -48,7 +48,7 @@ jobs:
           git config --global user.name "Igor Sachivka"
 
       - name: Lerna publish
-        run: lerna publish --conventional-commits --yes --exact 2>&1 | yarn airslate-lerna --token=${SLATE_TOKEN}
+        run: lerna publish --conventional-commits --yes --exact 2>&1 | yarn airslate-lerna --token=${SLATE_TOKEN} --owner=isachivka --repo=lerna-test
         env:
           SLATE_TOKEN: ${{ secrets.SLATE_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_PAT }}

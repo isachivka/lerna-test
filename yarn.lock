@@ -867,10 +867,10 @@
   dependencies:
     node-fetch "3.0.0-beta.9"
 
-"@naos/airslate-lerna@^1.4.3":
-  version "1.4.3"
-  resolved "https://artifactory.infrateam.xyz:443/artifactory/api/npm/npm/@naos/airslate-lerna/-/@naos/airslate-lerna-1.4.3.tgz#9d20f96a95fa344666f3e509e91b9bb396dbb3ee"
-  integrity sha512-iHcag1aLslmTvIXmfahpyLBfIx7zDh5HuijT1JPqtr0GcvDtE47iEYFRp+1Diy736P/bWNincpgXW4U/1B+6kg==
+"@naos/airslate-lerna@^1.4.4":
+  version "1.4.4"
+  resolved "https://artifactory.infrateam.xyz:443/artifactory/api/npm/npm/@naos/airslate-lerna/-/@naos/airslate-lerna-1.4.4.tgz#ba832cacf8137620358888a2eb1925bceff94bad"
+  integrity sha512-QG+mqofNCm6UNlTCLExcIQg86J4tq9fkVaqmBxqpv0VxCEGVdYlLtZSuw4LIzdQJBc7POnmoz5fQx6CszPpe+g==
   dependencies:
     "@naos/airslate-external" "^2.0.2"
     argparse "^2.0.1"
